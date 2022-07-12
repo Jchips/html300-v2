@@ -17,7 +17,34 @@
         <input type="text" class="input">
       </label>
       <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      <p>The total of my array elements summed with your favorite number is: <span class="fav-num-output"></span></p>
+    </form>
+
+    <!-- Phone company form -->
+    <form id="phone-form" method="get">
+      <label>Enter what company your phone is from:
+        <input type="text" class="input" name="phone">
+      </label>
+      <input type="submit">
+      <p class="phone-output"></p>
+    </form>
+
+    <!-- Pick a number from 1 to 10 form -->
+    <form id="one-and-ten-form">
+      <label>Pick a number between 1 and 10
+        <input type="number" class="input" name="less-than-ten">
+      </label>
+      <input type="submit">
+      <p class="one-and-ten-text"></p>
+    </form>
+    
+    <!-- Pick any number and add it to array form -->
+    <form id="pick-num-form">
+      <label>Pick a number to add to the array
+        <input type="number" class="input" name="number">
+      </label>
+      <input type="submit">
+      <p>Here are all the numbers in the array: <span class="array"></span></p>
     </form>
   </main>
 </body>
