@@ -19,8 +19,10 @@
       <input type="submit" value="See Demo!">
       <p>The total of my array elements summed with your favorite number is: <span class="fav-num-output"></span></p>
     </form>
+    <br><br>
 
-    <!-- Phone company form -->
+    <!-- What is your phone company form -->
+    <p>Prints a message based on user input</p>
     <form id="phone-form" method="get">
       <label>Enter what company your phone is from:
         <input type="text" class="input" name="phone">
@@ -28,23 +30,40 @@
       <input type="submit">
       <p class="phone-output"></p>
     </form>
+    <br><br>
 
     <!-- Pick a number from 1 to 10 form -->
+    <p>Adds user's inputted number to an array with numbers between 1-10</p>
     <form id="one-and-ten-form">
       <label>Pick a number between 1 and 10
         <input type="number" class="input" name="less-than-ten">
       </label>
-      <input type="submit">
+      <input type="submit" value="Submit">
+      <p class="display-array"></p>
       <p class="one-and-ten-text"></p>
     </form>
-    
+    <br><br>
+
     <!-- Pick any number and add it to array form -->
+    <p>Adds user's inputted number to an array and displays array</p>
     <form id="pick-num-form">
       <label>Pick a number to add to the array
         <input type="number" class="input" name="number">
       </label>
-      <input type="submit">
+      <input type="submit" value="Submit">
       <p>Here are all the numbers in the array: <span class="array"></span></p>
+    </form>
+    <br><br>
+
+    <!-- Multiply array by user input form -->
+    <p>Multiplies all numbers in array by user's inputted number</p>
+    <form id="multiply-form">
+      <label>Type a number
+        <input type="number" class="input" name="number">
+      </label>
+      <input type="submit" value="Submit">
+      <p>Here are all the numbers in the array multiplied by... <span class="user-input"></span></p>
+      <p class="new-array"></p>
     </form>
   </main>
 </body>
