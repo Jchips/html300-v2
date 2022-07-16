@@ -4,3 +4,72 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+$small-margin: 10px;
+$big-margin: 30px;
+
+body {
+  margin: $big-margin;
+  border: 40px solid $silver;
+  display: flex;
+}
+
+main img {
+  border-radius: 100%;
+  height: 250px;
+  margin-bottom: $small-margin;
+}
+
+h1 {
+  color: $dark-gray;
+  margin: $small-margin;
+}
+
+h2 {
+  font-style: italic;
+  font-weight: 100;
+  margin: $small-margin;
+  font-size: 22px;
+}
+
+aside {
+  background-color: #F5F5F5;
+  width: 100%;
+  padding: 20px;
+  margin: $big-margin;
+  & .info {
+    color: $dark-gray;
+    font-weight: 800;
+  }
+
+  & p {
+    font-size: large;
+    font-weight: 100;
+    color: #626161;
+  }
+}
+
+// aside p {
+//   font-size: large;
+//   font-weight: 100;
+//   color: #626161;
+// }
+
+// .info {
+//   color: $dark-gray;
+//   font-weight: 800;
+// }
+
+.linkedin {
+  display: flex;
+  & p {
+    margin: $small-margin;
+    color: $dark-gray;
+    font-weight: 500;
+  }
+}
+
+// .linkedin p {
+//   margin: $margin;
+//   color: $dark-gray;
+//   font-weight: 500;
+// }
