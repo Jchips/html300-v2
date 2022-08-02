@@ -9,22 +9,22 @@ cards.forEach(element => {
   let card = document.createElement("div"); // creates card
   card.classList.add("template-hook");
   card.innerHTML = `
-<main class="main">
-  <img src="img/headshot.jpg" alt="headshot" />
-  <h1>${element.name}</h1>
-  <h2>${element.jobTitle}</h2>
-</main>
-<aside>
-  <p><span class="info">Company:</span> ${element.company}</p>
-  <p><span class="info">Experience:</span> ${element.experience}</p>
-  <p><span class="info">School:</span> ${element.school}</p>
-  <p><span class="info">Major:</span> ${element.major}</p>
-  <p><span class="info">Email:</span> ${element.email}</p>
-  <div class="linkedin">
-      <img src="img/linkedin.svg" alt="Linkedin logo">
-      <p>${element.linkedInUrl}</p>
-  </div>
-</aside>`
+  <main class="main">
+    <img src="img/headshot.jpg" alt="headshot" />
+    <h1>${element.name}</h1>
+    <h2>${element.jobTitle}</h2>
+  </main>
+  <aside>
+    <p><span class="info">Company:</span> ${element.company}</p>
+    <p><span class="info">Experience:</span> ${element.experience}</p>
+    <p><span class="info">School:</span> ${element.school}</p>
+    <p><span class="info">Major:</span> ${element.major}</p>
+    <p><span class="info">Email:</span> ${element.email}</p>
+    <div class="linkedin">
+        <img src="img/linkedin.svg" alt="Linkedin logo">
+        <p>${element.linkedInUrl}</p>
+    </div>
+  </aside>`
 
 // Appends each card to the HTML body
 let body = document.querySelector("body");
