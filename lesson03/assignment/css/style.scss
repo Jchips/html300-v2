@@ -7,8 +7,8 @@
 $small-margin: 10px;
 $big-margin: 30px;
 
-// add margin and border to the body
-body {
+// add margin and border to the card
+.template-hook {
   margin: $big-margin;
   border: 40px solid $silver;
   display: flex;
