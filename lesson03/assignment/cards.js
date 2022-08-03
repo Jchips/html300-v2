@@ -6,7 +6,15 @@ let cards = JSON.parse(cardsJSON);
 
 // Loop through data with string templating
 cards.forEach(element => {
-  let card = document.createElement("div"); // creates card
+
+  // Loops through all the languages each person/dog knows and adds them to a string to display them later
+  let codingLanguages = "";
+  for(const languages in element.codeLanguages) {
+    codingLanguages += element.codeLanguages[languages] += " ";
+  }
+
+  // creates card
+  let card = document.createElement("div");
   card.classList.add("template-hook");
   card.innerHTML = `
   <main class="main">
@@ -24,8 +32,10 @@ cards.forEach(element => {
         <img src="img/linkedin.svg" alt="Linkedin logo">
         <p>${element.linkedInUrl}</p>
     </div>
+    <div id="languages">
+      <p><span class="info">Known languages:</span> ${codingLanguages}</p>
+    </div>
   </aside>`
-
 // Appends each card to the HTML body
 let body = document.querySelector("body");
 body.append(card)
