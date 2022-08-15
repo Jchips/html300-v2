@@ -3,13 +3,36 @@ body {
   font-family: sans-serif;
 }
 
-// sets the header and footer color
-@mixin headerFooter {
+// navigation bar and footer color
+@mixin navFooter {
   background-color: #343a40;
 }
 
+// centered text settings 
+@mixin centerText {
+  color:#fff;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+// Controls the color of the links on the page
+// Makes the "home" button color white so user's can see it's the page they're currently on
+// Makes the link white on hover
+@mixin linkColor($color: #fff) {
+  & a:hover {
+    color: $color;
+  }
+  & .active {
+    color: $color;
+  }
+}
+
+// Navigation bar
 nav {
-  @include headerFooter;
+  @include navFooter;
+  @include linkColor;
+  
   & ul {
     display: flex;
     margin: 0;
@@ -17,9 +40,6 @@ nav {
     padding: 20px;
   }
 
-  & .active {
-    color: #fff;
-  }
 }
 
 nav li,
@@ -30,13 +50,7 @@ nav a {
   font-weight: 900;
 }
 
-@mixin text {
-  color:#fff;
-  text-align: center;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
+// Styles the background image at the top of the page
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/hero-image.webp");
   background-repeat: no-repeat;
@@ -48,7 +62,7 @@ header {
     padding: 60px;
     font-size: 1.5rem;
     font-style: italic;
-    @include text;
+    @include centerText;
     animation: slideIn 2s ease-out 0s 1;
   }
 }
@@ -64,6 +78,7 @@ header {
   }
 }
 
+// Makes the phone company links sit next to eachother
 .phone-company-links {
   display: flex;
   flex-wrap: wrap;
@@ -87,10 +102,12 @@ header {
   }
 }
 
+// Page footer
 footer {
-  @include text;
-  @include headerFooter;
-  padding: 20px;
+  @include centerText;
+  @include navFooter;
+  @include linkColor;
+  padding: 30px;
 
   & nav {
     padding: 20px;
@@ -98,4 +115,5 @@ footer {
   & p {
     margin: 0;
   }
+  
 }
