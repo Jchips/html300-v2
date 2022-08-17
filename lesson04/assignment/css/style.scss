@@ -1,18 +1,17 @@
+$font: sans-serif;
+$navColor: #343a40; // navigation and footer color
+$companyLinksPadding: 20px;
+
 body {
   margin: 0;
-  font-family: sans-serif;
-}
-
-// navigation bar and footer color
-@mixin navFooter {
-  background-color: #343a40;
+  font-family: $font;
 }
 
 // centered text settings 
 @mixin centerText {
   color:#fff;
   text-align: center;
-  font-family: sans-serif;
+  font-family: $font;
   font-weight: bold;
 }
 
@@ -30,8 +29,8 @@ body {
 
 // Navigation bar
 nav {
-  @include navFooter;
   @include linkColor;
+  background-color: $navColor;
   
   & ul {
     display: flex;
@@ -84,8 +83,8 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-around;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: $companyLinksPadding;
+  padding-bottom: $companyLinksPadding;
 }
 
 // Transition and transform from ThoughtBot.com https://thoughtbot.com/blog/transitions-and-transforms
@@ -105,9 +104,9 @@ header {
 // Page footer
 footer {
   @include centerText;
-  @include navFooter;
   @include linkColor;
   padding: 30px;
+  background-color: $navColor;
 
   & nav {
     padding: 20px;
