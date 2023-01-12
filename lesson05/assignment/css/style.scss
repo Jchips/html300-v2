@@ -4,3 +4,41 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  'header header header header header'
+  'nav nav nav nav nav'
+  'side side main main main'
+  'footer footer footer footer footer';
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+  // justify-content: space-between;
+
+  & ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  & li {
+    // display: inline-block;
+  }
+
+  & li a {
+    text-decoration: none;
+
+  }
+}
+
+footer {
+  grid-area: footer;
+}
+
