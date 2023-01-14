@@ -4,41 +4,114 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// grid
 .grid-container {
   display: grid;
   grid-template-areas: 
-  'header header header header header'
-  'nav nav nav nav nav'
-  'side side main main main'
-  'footer footer footer footer footer';
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  'header header header header header header'
+  'nav nav nav nav nav nav'
+  'side side main main main main'
+  'footer footer footer footer footer footer';
+  grid-template-columns: repeat(6, 1fr);
 }
 
+// page header
 header {
   grid-area: header;
+  color: $white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://dl2.pushbulletusercontent.com/39oo9XxNhIxmAiJYaY9ECjkESjbX7lB7/20190317_202843.jpg");
+  background-size: 100%;
+
+  & h1 {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  & p {
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    animation: slideIn 1s ease-out 0s 1;
+  }
 }
 
-nav {
+// Makes the header text slide in from the left on page load.
+// Source: https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Controls the color of the links on the page
+// Makes the "home" button color white so user's can see it's the page they're currently on
+// Makes the link white on hover
+@mixin linkColor($color: #fff) {
+  & a:hover {
+    color: $color;
+  }
+  & .active {
+    color: $color;
+  }
+}
+
+// navigation bar
+.nav {
+  @include linkColor;
   grid-area: nav;
-  // justify-content: space-between;
+  background-color: $darkGrey;
 
   & ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
-  }
-
-  & li {
-    // display: inline-block;
-  }
-
-  & li a {
-    text-decoration: none;
-
+    padding: 20px;
   }
 }
 
+nav a {
+  text-decoration: none;
+  color: $lightGrey;
+  font-weight: 900;
+}
+
+// Styles the side bar 
+.sidebar {
+  grid-area: side;
+  background-color: $darkBlue;
+  color: $white;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+// styles the main content of the page. api should fill this out
+.main-content {
+  grid-area: main;
+  padding: 20px;
+}
+
+// Page footer
 footer {
+  @include linkColor;
   grid-area: footer;
+  padding: 30px;
+  text-align: center;
+  background-color: $darkGrey;
+  color: $lightGrey;
+
+  & nav {
+    padding: 20px;
+  }
+  & p {
+    margin: 0;
+  }
 }
 
