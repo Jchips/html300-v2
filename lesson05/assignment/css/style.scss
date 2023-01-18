@@ -11,8 +11,18 @@
   'header header header header header header'
   'nav nav nav nav nav nav'
   'side side main main main main'
+  'section section section section section section'
   'footer footer footer footer footer footer';
   grid-template-columns: repeat(6, 1fr);
+  @include media-query(mobile) {
+    grid-template-areas: 
+    'header header header header header header'
+    'nav nav nav nav nav nav'
+    'main main main main main main'
+    'side side side side side side'
+    'section section section section section section'
+    'footer footer footer footer footer footer';
+  }
 }
 
 // page header
@@ -28,6 +38,7 @@ header {
     text-transform: uppercase;
   }
 
+  // animated header text
   & p {
     padding: 10px;
     text-align: center;
@@ -74,6 +85,7 @@ header {
   }
 }
 
+// styles navigation text in navbar and footer 
 nav a {
   text-decoration: none;
   color: $lightGrey;
@@ -96,6 +108,32 @@ h2 {
 .main-content {
   grid-area: main;
   padding: 20px;
+}
+
+// Makes the phone company links sit next to eachother
+.company-links {
+  grid-area: section;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  padding-top: $companyLinksPadding;
+  padding-bottom: $companyLinksPadding;
+  background-color: $whiteish;
+}
+
+// Transition and transform from ThoughtBot.com https://thoughtbot.com/blog/transitions-and-transforms
+.company-links img {
+  margin: 20px;
+  height: 76.8px;
+  min-width: 72px;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4));
+  transition: transform 0.7s;
+
+  // Makes the links grow bigger when you hover the mouse over them
+  &:hover {
+  transform: scale(1.4);
+  }
 }
 
 // Page footer
