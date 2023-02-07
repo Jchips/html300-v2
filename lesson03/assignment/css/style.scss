@@ -1,6 +1,64 @@
 // Import partials here
 @import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
+@import 'colors.variables';
 @import 'components.content';
 
+// small margin and a bigger margin
+$small-margin: 10px;
+$big-margin: 30px;
+
+// add margin and border to the card
+.template-hook {
+  margin: $big-margin;
+  border: 40px solid $silver;
+  display: flex;
+}
+
+// Makes the image a circle
+main img {
+  border-radius: 100%;
+  height: 250px;
+  margin-bottom: $small-margin;
+}
+
+// Styles Paulo Maldini's name and job title.
+h1 {
+  color: $dark-gray;
+  margin: $small-margin;
+}
+
+h2 {
+  font-style: italic;
+  font-weight: 100;
+  margin: $small-margin;
+  font-size: 22px;
+}
+
+// Makes the background of Maldini's info light gray and the 
+// information titles darker than the information.
+aside {
+  background-color: $light-gray;
+  width: 100%;
+  padding: 20px;
+  margin: $big-margin;
+  & .info {
+    color: $dark-gray;
+    font-weight: 800;
+  }
+
+  & p {
+    font-size: large;
+    font-weight: 100;
+    color: $gray;
+  }
+}
+
+// Puts the Linkedin photo and link next to each other.
+.linkedin {
+  display: flex;
+  & p {
+    margin: $small-margin;
+    color: $dark-gray;
+    font-weight: 500;
+  }
+}

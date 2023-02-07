@@ -1,17 +1,5 @@
-html {
-    box-sizing: border-box;
-}
+// Gives the image and text below it padding
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
-}
-
-.main {
+main {
     padding: 2rem;
-}
-
-h1 {
-    color: $red;  
 }
