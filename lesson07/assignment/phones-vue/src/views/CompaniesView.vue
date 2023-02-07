@@ -1,8 +1,8 @@
 <template>
   <div class="companies">
-    <header>
-      <!-- <h1>Companies page</h1> -->
-    </header>
+    <!-- <header>
+      <h1 id="h1">Companies</h1>
+    </header> -->
     <div v-for="image in images" :key="image" class="phone-company">
       <img :src="image" class="img-fluid img-thumbnail company-img" alt="pixel 7 variants">
       <div class="card text-center">

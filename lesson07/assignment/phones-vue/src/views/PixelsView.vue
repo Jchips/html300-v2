@@ -1,18 +1,67 @@
 <template>
   <div class="pixels">
-    <!-- <header></header> -->
+    <!-- <header>
+      <h1 id="h1"></h1>
+    </header> -->
+
+    <div class="accordion">
+      <div v-for="phones in pixels" v-bind:key="phones.id" class="accordion-item">
+        <div class="accordion-header" :id="phones.header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            :data-bs-target="phones.target" aria-expanded="false" aria-controls="collapseOne">
+            {{ phones.name }}
+          </button>
+        </div>
+        <div :id="phones.id" class="accordion-collapse collapse" :aria-labelledby="phones.header">
+          <div class="accordion-body">
+            <h2>Features</h2>
+            <ul>
+              <li v-for="feature in phones.features" :key="feature">{{ feature }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import '/../data.js';
 document.getElementById("h1").innerHTML = "Pixels";
+// import pixelData from "./../data.js";
+// pixelData
 export default {
   name: "PixelsView",
-  data () {
+  data() {
     return {
       pixels: [
-        {name: "Pixel 7 Pro", id: "pixel-7-pro-features"}
+        {
+          name: "Pixel 6 Pro",
+          id: "pixel-6-pro",
+          target: "#pixel-6-pro",
+          features: ["120 Hz refresh rate", "Wireless charging", "UFS 3.1 storage", "Gaming Mode",
+            "Extra dim mode", "Stereo speakers", "Mute camera and mic option",
+            "Battery Share (Reverse wireless charging)", "Optical in-display fingerprint scanner",
+            "IP68 water/dust resistant"],
+          header: "HeadingOne"
+        },
+        {
+          name: "Pixel 6",
+          id: "pixel-6",
+          target: "#pixel-6",
+          features: ["90 Hz refresh rate", "Wireless charging", "UFS 3.1 storage", "Gaming Mode",
+            "Mute camera and mic option", "Battery Share (Reverse wireless charging)",
+            "In-display fingerprint scanner", "IP68 water/dust resistant"],
+          header: "HeadingTwo"
+        },
+        {
+          name: "Pixel 6a",
+          id: "pixel-6a",
+          target: "#pixel-6a",
+          features: ["5G", "Wifi 6E", "UFS 3.1 storage", "Stereo speakers", "One-handed mode",
+            "IP67 water/dust resistant", "In-display fingerprint sensor",
+            "At least 5yrs of Google updates"],
+          header: "HeadingThree"
+        }
       ]
     }
   }
