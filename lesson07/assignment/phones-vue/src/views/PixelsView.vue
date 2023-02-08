@@ -4,6 +4,7 @@
       <h1 id="h1"></h1>
     </header> -->
 
+    <!-- Creates accordion for each phone using v-for loop with an array of objects -->
     <div class="accordion">
       <div v-for="phones in pixels" v-bind:key="phones.id" class="accordion-item">
         <div class="accordion-header" :id="phones.header">
@@ -22,13 +23,15 @@
         </div>
       </div>
     </div>
+
+    <!-- shows 'more content' if you press the button (using v-if) -->
+		<button	v-on:click="toggleContent	=	!toggleContent">Press to see more content</button>
+    <p v-if="toggleContent">more content</p>
   </div>
 </template>
 
 <script>
-document.getElementById("h1").innerHTML = "Pixels";
-// import pixelData from "./../data.js";
-// pixelData
+document.getElementById("h1").innerHTML = "Pixels"; // Supposed to change header text
 export default {
   name: "PixelsView",
   data() {
@@ -62,7 +65,8 @@ export default {
             "At least 5yrs of Google updates"],
           header: "HeadingThree"
         }
-      ]
+      ],
+      toggleContent: false,
     }
   }
 }

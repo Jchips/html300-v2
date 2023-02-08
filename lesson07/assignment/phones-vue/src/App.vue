@@ -1,7 +1,9 @@
 <template>
+  <!-- Put a header here so that it appears above the navbar on each page  -->
   <header>
     <h1 id="h1"></h1>
   </header>
+  <!-- navbar links  -->
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/companies">Companies</router-link> |
@@ -18,7 +20,6 @@
 @import '@/sass/styles.scss';
 
 #app {
-  // font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -3,6 +3,8 @@
     <!-- <header>
       <h1 id="h1">Companies</h1>
     </header> -->
+
+    <!-- Makes a card for each different image (phone company) using v-for loop with an array -->
     <div v-for="image in images" :key="image" class="phone-company">
       <img :src="image" class="img-fluid img-thumbnail company-img" alt="pixel 7 variants">
       <div class="card text-center">
@@ -28,9 +30,7 @@
 </template>
 
 <script>
-// import { google } from 'fs';
-
-document.getElementById("h1").innerHTML = "Companies";
+document.getElementById("h1").innerHTML = "Companies"; // Supposed to change header text
 export default {
   name: 'CompaniesView',
   data () {

@@ -3,6 +3,8 @@
     <!-- <header>
       <h1 id="h1"></h1>
     </header> -->
+
+    <!-- creates a 2 column row for each phone using v-for loop -->
     <div class="grid-container">
       <div v-for="samsung in samsungs" :key="samsung.id" class="row">
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-12">
@@ -48,11 +50,9 @@
             </div>
             <button class="carousel-control-prev" type="button" :data-bs-target="`#${ samsung.id }`" data-bs-slide="prev">
               <span class="carousel-control-prev-icon"></span>
-              <!-- <span class="visually-hidden">Previous</span> -->
             </button>
             <button class="carousel-control-next" type="button" :data-bs-target="`#${ samsung.id }`" data-bs-slide="next">
               <span class="carousel-control-next-icon"></span>
-              <!-- <span class="visually-hidden">Next</span> -->
             </button>
           </div>   
         </div>
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-document.getElementById("h1").innerHTML = "Grid";
+document.getElementById("h1").innerHTML = "Grid"; // Supposed to change header text
 export default {
   data () {
     return {

@@ -15,17 +15,16 @@
 
     <!-- 
     Displays links to phone company sites.
-    Also animates the link icons using lax.js 
     -->
     <section class="links">
       <!--Google-->
-      <a class="lax" data-lax-preset="fadeIn swing" data-lax-anchor="self" href="https://store.google.com/us/category/phones" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png" alt="Google logo" /></a>
+      <a href="https://store.google.com/us/category/phones" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png" alt="Google logo" /></a>
       <!--Apple-->
-      <a class="lax" data-lax-preset="fadeIn swing" data-lax-anchor="self" href="https://www.apple.com/iphone/" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-grey/512/APPLE-512.png" alt="Apple logo" /></a>
+      <a href="https://www.apple.com/iphone/" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-grey/512/APPLE-512.png" alt="Apple logo" /></a>
       <!--Samsung-->
-      <a class="lax" data-lax-preset="fadeIn swing" data-lax-anchor="self" href="https://www.samsung.com/us/mobile/phones/all-phones/" target="_blank"><img src="https://openconnectivity.org/wp-content/uploads/2015/09/samsung-logo-4.png" alt="Samsung logo" /></a>
+      <a href="https://www.samsung.com/us/mobile/phones/all-phones/" target="_blank"><img src="https://openconnectivity.org/wp-content/uploads/2015/09/samsung-logo-4.png" alt="Samsung logo" /></a>
       <!--OnePlus-->
-      <a class="lax" data-lax-preset="fadeIn swing" data-lax-anchor="self" href="https://www.oneplus.com" target="_blank"><img src="https://static.savings-united.com/shop/27740/logo/_0021_OnePlus-coupons.png" alt="OnePlus logo" /></a>
+      <a href="https://www.oneplus.com" target="_blank"><img src="https://static.savings-united.com/shop/27740/logo/_0021_OnePlus-coupons.png" alt="OnePlus logo" /></a>
     </section>
 
     <!-- <main class="main"> -->
@@ -51,14 +50,16 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
+
 import HomePage from "@/components/HomePage.vue";
-// document.getElementById("h1").innerHTML = "Phones.com";
 
-// import "bootstrap/dist/js/bootstrap.min.js";
-// import { Popover } from 'bootstrap/dist/js/bootstrap.esm.min.js'
-// import { Popover } from '@popperjs/core'
+// Waits for the window to load before changing the header text 
+window.onload = function () {
+  document.getElementById("h1").innerHTML = "Phones.com"; // Supposed to change header text
+};
 
+// Animates the header text on page scroll 
+// Code from: https://css-tricks.com/books/greatest-css-tricks/scroll-animation/ 
 window.addEventListener(
   "scroll",
   () => {
@@ -75,12 +76,5 @@ export default {
   components: {
     HomePage,
   },
-  // mounted() {
-  //    // got code from https://therichpost.com/vue-3-bootstrap-5-popover-working-demo/
-  //   Array.from(document.querySelectorAll('button[data-bs-toggle="popover"]'))
-  //   .forEach(popoverNode => new Popover(popoverNode, {
-  //     trigger: 'focus'
-  //   }))
-  // }
 };
 </script>

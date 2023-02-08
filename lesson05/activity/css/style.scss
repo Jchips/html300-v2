@@ -4,3 +4,65 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+@mixin navText {
+  color: $white;
+}
+
+@mixin navCenter {
+  padding: 0;
+}
+
+nav {
+  @include navText;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $teal;
+  margin: 0;
+  padding: 20px;
+  font-weight: bold;
+  font-family: $font-fam;
+  @include media-query(tab) {
+    display: block;
+    text-align: center;
+  }
+
+  & a {
+    font-size: 1.5rem;
+    // font-size: 32px;
+  }
+
+  & ul {
+    @include navCenter;
+    display: flex;
+    list-style: none;
+    // font-size: 24px;
+    @include media-query(tab) {
+      @include navCenter;
+      justify-content: center;
+    }
+  }
+
+  & li a {
+    padding: 40px;
+    font-size: 1rem;
+    @include navText;
+    // font-weight: 600;
+  }
+}
+
+nav a:visited {
+  @include navText;
+}
+
+// @media screen and (max-width: 768px) {
+//   nav {
+//     display: block;
+//     text-align: center;
+
+//     & ul {
+//       @include navCenter;
+//       justify-content: center;
+//     }
+//   }
+// }

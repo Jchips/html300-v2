@@ -1,5 +1,7 @@
 $darkGrey: #343a40; // navigation color
 $lightGrey: rgba(255,255,255,.5); // nav links color
+// makes the animations move when page scrolls. 
+// Scroll animation code from https://css-tricks.com/books/greatest-css-tricks/scroll-animation/
 $scrollAnimation: calc(var(--scroll) * -1s);
 
 // makes the headers in all caps
@@ -91,6 +93,7 @@ main {
   animation-fill-mode: both;
 }
 
+// Makes the hero text smaller on smaller screens
 @media screen and (max-width: 640px) {
   #hero-1 h1 {
     font-size: 4rem;
@@ -115,6 +118,7 @@ main {
   }
 }
 
+// Phone company links on home page
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -133,7 +137,7 @@ main {
   }
 
   & img:hover {
-    transform: scale(1.4);
+    transform: scale(1.4); // makes the links become larger when hovered over
   }
 }
 
@@ -229,3 +233,7 @@ h4 {
 }
 // end of grid page css
 
+.accordion {
+  text-align: left;
+  padding: 20px;
+}
