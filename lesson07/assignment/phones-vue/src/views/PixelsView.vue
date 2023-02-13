@@ -27,6 +27,7 @@
     <!-- shows 'more content' if you press the button (using v-if) -->
 		<button	v-on:click="toggleContent	=	!toggleContent">Press to see more content</button>
     <p v-if="toggleContent">more content</p>
+    <p v-else></p>
   </div>
 </template>
 

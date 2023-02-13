@@ -35,7 +35,7 @@
       <!-- Dismissable popover -->
       <!-- Code from https://getbootstrap.com/docs/5.0/components/popovers/ -->
       <!-- <button id="popover" tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="About Me" data-bs-content="I am a phone enthusiast, web developer in the making, and I have cold hands.">About Me</button> -->
-      <HomePage/>
+      <HomePage></HomePage>
       
     <!-- </main> -->
   </div>
