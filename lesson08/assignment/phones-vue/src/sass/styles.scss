@@ -6,19 +6,19 @@ $lightGrey: rgba(255,255,255,.5); // nav links color
 $scrollAnimation: calc(var(--scroll) * -1s);
 
 // page header
+// Image credit: https://upload.wikimedia.org/wikipedia/commons/3/33/Mobile_Phones_Wikivoyage_banner.jpg
 header {
-  // color: $white;
-  // background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://dl2.pushbulletusercontent.com/39oo9XxNhIxmAiJYaY9ECjkESjbX7lB7/20190317_202843.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://upload.wikimedia.org/wikipedia/commons/3/33/Mobile_Phones_Wikivoyage_banner.jpg');
   background-size: 100%;
+  background-position: bottom;
+  color: rgb(171, 169, 169);
   padding: 10px;
   margin-bottom: 10px;
-  // height: 100px;
 
   & h1 {
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
-    // margin: 0;
   }
 
   // animated header text
@@ -31,12 +31,6 @@ header {
     animation: slideIn 1s ease-out 0s 1;
   }
 }
-
-// makes the headers in all caps
-// h1 {
-//   text-align: center;
-//   text-transform: uppercase;
-// }
 
 // Controls the color of the links on the page
 // Makes the "home" button color white so user's can see it's the page they're currently on
@@ -91,7 +85,6 @@ main {
   text-align: center;
   position: absolute;
   transform: translate(-50%, -50%);
-  // font-family: "Aller", sans-serif;
   color: white;
   margin: 0;
 }

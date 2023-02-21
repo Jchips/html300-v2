@@ -1,8 +1,6 @@
 <template>
   <div class="grid">
-    <!-- <header>
-      <h1 id="h1"></h1>
-    </header> -->
+    <!-- Header -->
     <HeaderComp>
       Grid
     </HeaderComp>
@@ -66,7 +64,6 @@
 
 <script>
 import HeaderComp from "@/components/HeaderComp.vue"
-// document.getElementById("h1").innerHTML = "Grid"; // Supposed to change header text
 export default {
   data () {
     return {

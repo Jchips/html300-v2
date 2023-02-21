@@ -1,11 +1,6 @@
 <template>
   <div class="latest">
-    <!-- <header>
-      <h1 id="h1">Latest Phones</h1>
-    </header> -->
-    <!-- <HeaderComp>
-      Latest Phones
-    </HeaderComp> -->
+    <!-- Header -->
     <header-comp>Latest Phones</header-comp>
     <LatestCards :images="images" :companyLinks="companyLinks" :alts="alts" :imageTitle="imageTitle">
     </LatestCards>
@@ -37,7 +32,7 @@
 <script>
 import HeaderComp from "@/components/HeaderComp.vue";
 import LatestCards from "@/components/LatestCards.vue";
-// document.getElementById("h1").innerHTML = "Latest Phones"; // Supposed to change header text
+
 export default {
   name: 'LatestView',
   data () {

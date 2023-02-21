@@ -1,8 +1,4 @@
 <template>
-  <!-- Put the header here so that it appears above the navbar on each page  -->
-  <!-- <header-comp>
-    <h1 id="h1"></h1>
-  </header-comp> -->
   <!-- navbar links  -->
   <nav>
     <router-link to="/">Home</router-link> |
@@ -36,12 +32,3 @@ nav a.router-link-exact-active {
 }
 
 </style>
-
-<script>
-// import HeaderComp from "@/components/HeaderComp.vue"
-export default {
-  components: {
-    // HeaderComp
-  }
-}
-</script>

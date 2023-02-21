@@ -1,8 +1,6 @@
 <template>
   <div class="pixels">
-    <!-- <header>
-      <h1 id="h1"></h1>
-    </header> -->
+    <!-- Header -->
     <header-comp>
       Pixels
     </header-comp>
@@ -36,7 +34,6 @@
 
 <script>
 import HeaderComp from "@/components/HeaderComp.vue";
-// document.getElementById("h1").innerHTML = "Pixels"; // Supposed to change header text
 export default {
   name: "PixelsView",
   data() {
