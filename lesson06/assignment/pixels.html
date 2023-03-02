@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Google Pixels</title>
+  </head>
+  <body>
+    <header>
+      <h1>Google Pixels</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="companies.html">Featured Companies</a></li>
+        <li><a href="grid.html">grid</a></li>
+        <li><a href="pixels.html" class="active">Google Pixels</a></li>
+      </ul>
+    </nav>
+    <main class="main">
+
+      <!-- PIXEL 6 PRO ACCORDION  -->
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Pixel 6 Pro
+            </button>          
+          </div>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+            <div class="accordion-body">
+              <h2>Features</h2>
+              <ul id="pixel-6-pro-features">
+                <!-- Phone features will load from data.js  -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- PIXEL 6 ACCORDION  -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Pixel 6
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+            <div class="accordion-body">
+              <h2>Features</h2>
+              <ul id="pixel-6-features">
+                <!-- Phone features will load from data.js  -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- PIXEL 6A ACCORDION  -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Pixel 6a
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+            <div class="accordion-body">
+              <ul id="pixel-6a-features">
+                <!-- Phone features will load from data.js  -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="data.js"></script>
+</html>
