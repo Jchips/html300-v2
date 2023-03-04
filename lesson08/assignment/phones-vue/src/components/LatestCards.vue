@@ -4,7 +4,7 @@
     <div v-for="(image, index) in images" :key="index" class="phone-company">
       <img :src="image" class="img-fluid company-img" :alt="alts[index]" 
       :title="imageTitle[index]" @click="toggleBorder" :class="{'img-border': isHidden}">
-      <div class="card text-center">
+      <!-- <div class="card text-center">
         <div class="card-header">
           Google Pixel 7
         </div>
@@ -21,7 +21,7 @@
         <div class="card-footer text-muted">
           Phone released: October 2022
         </div>
-      </div>
+      </div> -->
     </div> 
   </div>
 </template>

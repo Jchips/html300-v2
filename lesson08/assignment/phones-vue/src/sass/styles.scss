@@ -9,8 +9,9 @@ $scrollAnimation: calc(var(--scroll) * -1s);
 // Image credit: https://upload.wikimedia.org/wikipedia/commons/3/33/Mobile_Phones_Wikivoyage_banner.jpg
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://upload.wikimedia.org/wikipedia/commons/3/33/Mobile_Phones_Wikivoyage_banner.jpg');
-  background-size: 100%;
-  background-position: bottom;
+  background-size: cover;
+  background-position: center 27%;
+  background-repeat: no-repeat;
   color: rgb(171, 169, 169);
   padding: 10px;
   margin-bottom: 10px;
@@ -48,15 +49,18 @@ header {
 nav {
   @include linkColor;
   background-color: $darkGrey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-  & ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    margin: 0;
-  }
+  // & ul {
+  //   list-style: none;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: space-around;
+  //   padding: 20px;
+  //   margin: 0;
+  // }
 
   // styles navigation text in navbar
   & a {
@@ -98,9 +102,10 @@ main {
     font-size: 4.5rem;
     text-transform: uppercase;
     color: #ffce00;
-    animation: enlarge 0.5s ease-in 0s;
+    animation: enlarge 0.5s ease-in;
     animation-play-state: paused;
     animation-delay: $scrollAnimation;
+    animation-fill-mode: forwards;
   }
 }
 

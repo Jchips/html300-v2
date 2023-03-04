@@ -6,10 +6,10 @@
       lax.js code from https://alexfox.dev/laxxx/
       -->
       <div id="hero-1" class="hero-text">
-        <h1 class="lax" data-lax-scale="(vh*0.3) 1, -elh 0.2" data-lax-anchor="self" style="backface-visibility: hidden; transform: scale(1);">Phones.com</h1>
+        <h1 style="backface-visibility: hidden; transform: scale(1);">Phones.com</h1>
       </div>
       <div id="hero-2" class="hero-text">
-        <h4 class="lax" data-lax-translate-x="vh 0, -elh (vw*.2)" data-lax-anchor="self" style="backface-visibility: hidden; transform: translateX(56.8889px);">Helping you chose your next smartphone!</h4>
+        <h4 style="backface-visibility: hidden; transform: translateX(56.8889px);">Helping you chose your next smartphone!</h4>
       </div>
     </section>
 
