@@ -5,11 +5,125 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 05 - CSS Grid</title>
+        <title>iPhones</title>
     </head>
     <body>
-        <main class="main">
+
+      <!-- grid  -->
+      <div class="grid-container">
+        <header>
+          <h1>iPhones</h1>
+          <p>Keep up with the latest phones!</p>
+        </header>
+
+        <!-- Navigation bar -->
+        <nav class="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="active">iPhones</a></li>
+            <li><a href="#">Samsungs</a></li>
+            <li><a href="#">Pixels</a></li>
+          </ul>
+        </nav>
+
+        <!-- Sidebar - gives info about brand of phone -->
+        <div class="sidebar">
           
+          <!-- info about iphones -->
+          <h2>iPhone info</h2>
+          <h3>Features:</h3>
+          <ul>
+            <li><span>Siri</span></li>
+            <li><span>Airdrop</span></li>
+            <li><span>Apple Pay</span></li>
+            <li><span>True tone display</span></li>
+            <li><span>Tap-to-top</span></li>
+            <li><span>Dual stereo speakers</span></li>
+            <li><span>Wireless & fast charging</span></li>
+            <li><span>iMessage & FaceTime</span></li>
+            <li><span>Silent & ring physical switch</span></li>
+            <li><span>Animoji/Memoji <i>[exception: SE (2022)]</i></span></li>
+            <li><span>3D Face unlock <i>[exception: SE (2022)]</i></span></li>
+            <li><span>IP68 water/dust resistant <i>[exception: SE (2022)]</i></span></li>
+          </ul>
+          <h3>Camera:</h3>
+          <ul>
+            <li><span>4K video @ 60fps on all cameras</span></li>
+            <li><span>Night mode</span></li>
+            <li><span>Ultrawide camera</span></li>
+          </ul>
+          <h3>Pros:</h3>
+          <ul>
+            <li><span>Best app optimization on a smartphone</span></li>
+            <li><span>Best at running games</span></li>
+            <li><span>Considered the smoothest running phones/really good software</span></li>
+            <li><span>Free earpods ITB </span></li>
+            <li><span>Apple Watch is the best smartwatch on the market</span></li>
+            <li><span>Updates phones for at least 5yrs</span></li>
+          </ul>
+          <h3>Cons:</h3>
+          <ul>
+            <li><span>Very limited customization</span></li>
+            <li><span>No headphone jack</span></li>
+            <li><span>Face ID doesn't work when phone is flat on table?</span></li>
+            <li><span>Doesn't use common charger (USB Type C)</span></li>
+            <li><span>Large notch <i>[exceptions: SE (2020), 8 Plus and older]</i></span></li>
+            <li><span>Transferring files between computer and phone is a bit complicated because of Apple being proprietary</span></li>
+            <li><span>Google Assistant and Google Maps are better than Siri and Apple Maps</span></li>
+            <li><span>Slowest charging in the industry</span></li>
+            <li><span>Two-step face unlock</span></li>
+            <li><span>Camera protrudes</span></li>
+          </ul>
+        </div>
+
+        <!-- iphones' specs (will be api content)-->
+        <main class="main-content">
+          <h2>iPhone 14 Pro Max</h2>
+          <p>api data specs....</p>
+          <h2>iPhone 14 Pro</h2>
+          <p>api data specs...</p>
         </main>
+
+        <!-- Phone company links  -->
+        <section class="company-links">
+          <!-- Google site link-->
+          <a href="https://store.google.com/us/category/phones" target="_blank">
+            <img src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png" alt="Google logo" />
+          </a>
+
+          <!--Apple site link-->
+          <a  href="https://www.apple.com/iphone/" target="_blank">
+            <img src="https://cdn2.iconfinder.com/data/icons/social-icons-grey/512/APPLE-512.png" alt="Apple logo" />
+          </a>
+          
+          <!--Samsung site link-->
+          <a href="https://www.samsung.com/us/mobile/phones/all-phones/" target="_blank">
+            <img src="https://openconnectivity.org/wp-content/uploads/2015/09/samsung-logo-4.png" alt="Samsung logo" />
+          </a>
+
+          <!--OnePlus site link-->
+          <a href="https://www.oneplus.com" target="_blank">
+            <img src="https://static.savings-united.com/shop/27740/logo/_0021_OnePlus-coupons.png" alt="OnePlus logo" />
+          </a>
+
+          <!--Huawei site link-->
+          <a  href="https://consumer.huawei.com/en/phones/" target="_blank">
+            <img src="imgs/huawei-logo.png" alt="Huawei logo" />
+          </a>
+        </section>
+
+        <!-- footer -->
+        <footer>
+          <nav>
+            <span><a href="#" class="active">Home</a></span>
+            <span>/</span>
+            <span><a href="#">About</a></span>
+            <span>/</span>
+            <span><a href="#">Contact</a></span>
+          </nav>
+          <p>&copy; 2022 Phones Site&emsp;|&emsp;Seattle, WA</p>
+        </footer>
+      </div>
     </body>
 </html>

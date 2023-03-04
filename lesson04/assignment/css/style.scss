@@ -1,0 +1,118 @@
+$font: sans-serif;
+$navColor: #343a40; // navigation and footer color
+$companyLinksPadding: 20px;
+
+body {
+  margin: 0;
+  font-family: $font;
+}
+
+// centered text settings 
+@mixin centerText {
+  color:#fff;
+  text-align: center;
+  font-family: $font;
+  font-weight: bold;
+}
+
+// Controls the color of the links on the page
+// Makes the "home" button color white so user's can see it's the page they're currently on
+// Makes the link white on hover
+@mixin linkColor($color: #fff) {
+  & a:hover {
+    color: $color;
+  }
+  & .active {
+    color: $color;
+  }
+}
+
+// Navigation bar
+nav {
+  @include linkColor;
+  background-color: $navColor;
+  
+  & ul {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding: 20px;
+  }
+
+}
+
+nav li,
+nav a {
+  color: rgba(255,255,255,.5);
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+// Styles the background image at the top of the page
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/hero-image.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em 5em 7em 5em;
+  text-align: center;
+
+  & h1 {
+    padding: 60px;
+    font-size: 1.5rem;
+    font-style: italic;
+    @include centerText;
+    animation: slideIn 2s ease-out 0s 1;
+  }
+}
+
+// Makes the header text slide in from the left on page load.
+// Source: https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Makes the phone company links sit next to eachother
+.phone-company-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  padding-top: $companyLinksPadding;
+  padding-bottom: $companyLinksPadding;
+}
+
+// Transition and transform from ThoughtBot.com https://thoughtbot.com/blog/transitions-and-transforms
+.phone-company-links img {
+  margin: 20px;
+  height: 76.8px;
+  min-width: 72px;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4));
+  transition: transform 0.7s;
+
+  // Makes the links grow bigger when you hover the mouse over them
+  &:hover {
+  transform: scale(1.5);
+  }
+}
+
+// Page footer
+footer {
+  @include centerText;
+  @include linkColor;
+  padding: 30px;
+  background-color: $navColor;
+
+  & nav {
+    padding: 20px;
+  }
+  & p {
+    margin: 0;
+  }
+  
+}

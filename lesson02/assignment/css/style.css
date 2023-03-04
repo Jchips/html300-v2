@@ -393,4 +393,56 @@ html {
 
 h1 {
   color: #F1352B;
+=======
+main {
+  padding: 2rem;
+}
+
+body {
+  margin: 30px;
+  border: 40px solid silver;
+  display: flex;
+}
+
+main img {
+  border-radius: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #4C4E52;
+  margin: 10px;
+}
+
+h2 {
+  font-style: italic;
+  font-weight: 100;
+  margin: 10px;
+  font-size: 22px;
+}
+
+aside {
+  background-color: #F5F5F5;
+  width: 100%;
+  padding: 20px;
+  margin: 30px;
+}
+aside .info {
+  color: #4C4E52;
+  font-weight: 800;
+}
+aside p {
+  font-size: large;
+  font-weight: 100;
+  color: #626161;
+}
+
+.linkedin {
+  display: flex;
+}
+.linkedin p {
+  margin: 10px;
+  color: #4C4E52;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
