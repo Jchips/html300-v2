@@ -22,13 +22,4 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-  background-color: #343a40; /* Navigation color */
-}
-
-nav a.router-link-exact-active {
-  color: #fff;
-}
-
 </style>

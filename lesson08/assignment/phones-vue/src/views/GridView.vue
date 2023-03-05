@@ -9,7 +9,7 @@
     <div class="grid-container">
       <div v-for="samsung in samsungs" :key="samsung.id" class="row">
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-12">
-          <img :src="require(`./../imgs/${samsung.id}.png`)" class="img img-fluid" :alt="samsung.name">
+          <img :src="require(`./../assets/imgs/${samsung.id}.png`)" class="img img-fluid" :alt="samsung.name">
         </div>
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-12">
           <!-- Adds a carousel about the Galaxy S22 Ultra  -->
@@ -33,7 +33,7 @@
                 <h5>{{ samsung.release }}</h5>
               </div>
 
-                <!-- Lists the key phone specs -->
+                <!-- Lists the key phone specs (will be API data)-->
               <div class="carousel-item specs">
                 <h2>{{ samsung.name}} (not the real specs)</h2>
                 <h4>Phone Specs:</h4>

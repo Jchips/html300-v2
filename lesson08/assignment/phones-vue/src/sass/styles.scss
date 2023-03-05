@@ -52,21 +52,18 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
-  // & ul {
-  //   list-style: none;
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: space-around;
-  //   padding: 20px;
-  //   margin: 0;
-  // }
+  padding: 30px;
+  background-color: #343a40; /* Navigation color */
 
   // styles navigation text in navbar
   & a {
     text-decoration: none;
     color: $lightGrey;
     font-weight: 900;
+  }
+
+  & a.router-link-exact-active {
+    color: #fff;
   }
 }
 
@@ -178,28 +175,9 @@ main {
 // centers the company images and makes images a bit smaller on computer screen
 .company-img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto;
   @include media-query(tab) {
     width: 70%;
-  }
-  // border: 5px solid red;
-}
-
-.card {
-  margin-bottom: 2rem;
-}
-
-// centers the bullet points in the Bootstrap card
-.card-body {
-  & ul {
-    display: table;
-    margin: 0 auto;
-    padding-bottom: 10px;
-  }
-
-  & ul li {
-    text-align: left;
   }
 }
 

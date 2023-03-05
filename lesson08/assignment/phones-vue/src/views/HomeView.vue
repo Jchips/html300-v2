@@ -1,15 +1,11 @@
 <template>
   <div class="home">
-    <section class="hero-image" title="photo creds: https://i.gadgets360cdn.com/large/Best_phones_2018_cover_ndtv_1545054680573.jpg">
-      <!--
-      animates the text in the header using lax.js
-      lax.js code from https://alexfox.dev/laxxx/
-      -->
+    <section class="hero-image">
       <div id="hero-1" class="hero-text">
-        <h1 style="backface-visibility: hidden; transform: scale(1);">Phones.com</h1>
+        <h1>Phones.com</h1>
       </div>
       <div id="hero-2" class="hero-text">
-        <h4 style="backface-visibility: hidden; transform: translateX(56.8889px);">Helping you chose your next smartphone!</h4>
+        <h4>Helping you chose your next smartphone!</h4>
       </div>
     </section>
 
