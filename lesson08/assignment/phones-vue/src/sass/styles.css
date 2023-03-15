@@ -1,0 +1,26 @@
+nav {
+  background-color: #343a40;
+}
+nav a:hover {
+  color: #fff;
+}
+nav .active {
+  color: #fff;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 0;
+}
+nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 900;
+}
+
+main {
+  margin: 20px;
+}/*# sourceMappingURL=styles.css.map */
